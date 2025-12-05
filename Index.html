@@ -26,7 +26,7 @@
       margin-top: 15px;
       display: block;
     }
-    select, input[type="text"], input[type="radio"], textarea {
+    select, input[type="text"], textarea {
       width: 100%;
       margin-top: 8px;
       padding: 8px;
@@ -52,9 +52,14 @@
   <div class="container">
     <h1>MovieSnacksBox Survey</h1>
 
-    <form name="movie-survey" method="POST" data-netlify="true">
+    <form name="movie-survey"
+          method="POST"
+          data-netlify="true"
+          onsubmit="setTimeout(function(){ window.location='/thankyou'; }, 50)">
       
-      <!-- QUESTION 1 -->
+      <!-- Netlify hidden field -->
+      <input type="hidden" name="form-name" value="movie-survey">
+
       <label for="genre">1. What type of movie genres do you watch the most?</label>
       <select name="Preferred Genre" id="genre" required>
         <option value="">Select one</option>
@@ -67,7 +72,6 @@
         <option>Other</option>
       </select>
 
-      <!-- QUESTION 2 -->
       <label>2. Would you be interested in a snack box that matches your movie genre?</label>
       <select name="Interest Level" required>
         <option value="">Select one</option>
@@ -77,11 +81,9 @@
         <option>No</option>
       </select>
 
-      <!-- QUESTION 3 -->
       <label>3. Which features interest you the most? (Select all that apply)</label>
       <textarea name="Favorite Features" placeholder="Mystery snacks, pop-ups, subscription, social media…"></textarea>
 
-      <!-- QUESTION 4 -->
       <label for="price">4. How much would you pay for a snack box?</label>
       <select name="Price Range" id="price" required>
         <option value="">Select one</option>
@@ -96,7 +98,4 @@
     </form>
   </div>
 </body>
-  <!DOCTYPE html>
-<html>
-<form name="movie-survey" method="POST" data-netlify="true" onsubmit="setTimeout(function(){window.location='/thankyou';}, 10)">
-  <input type="hidden" name="form-name" value="movie-survey">
+</html>

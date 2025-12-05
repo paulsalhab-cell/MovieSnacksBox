@@ -97,5 +97,3 @@
   </div>
 </body>
 </html>
-<form name="movie-survey" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="setTimeout(function(){window.location='/thankyou';}, 10)">
-  <input type="hidden" name="form-name" value="movie-survey">
